@@ -127,7 +127,6 @@ with tf.Graph().as_default():
         checkpoint_prefix = os.path.join(checkpoint_dir, "model")
         if not os.path.exists(checkpoint_dir):
             os.makedirs(checkpoint_dir)
-        all_vars = tf.initialize_all_variables()
    
         saver = tf.train.Saver({tf.Variable([0,0,0])}, max_to_keep=FLAGS.num_checkpoints)
 
